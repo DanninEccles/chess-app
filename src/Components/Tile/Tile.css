@@ -7,9 +7,9 @@
 
 .tile .chess-piece {
     background-repeat: no-repeat;
-    background-size: auto calc(80vh / 14);
-    height: calc(100vh / 14);
-    width: calc(100vh / 14);
+    background-size: auto min(calc(80vh / 14), calc(80vw / 14));
+    height: min(calc(80vh / 14), calc(80vw / 14));
+    width: min(calc(80vh / 14), calc(80vw / 14));
     background-position: center;
 }
 

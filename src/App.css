@@ -4,3 +4,16 @@
   height: 100vh;
   background-color: #383533;
 }
+
+#logo {
+  position: fixed;
+  left: 5vw;
+  top: 5vh;
+  color: #8D81B5FF;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1em;
+}
+
+#piece {
+  font-size: 1.5em;
+}

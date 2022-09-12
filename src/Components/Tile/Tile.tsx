@@ -1,6 +1,6 @@
 import './Tile.css';
 
-const validSquare = (xAxis: number, yAxis: number): boolean => {
+export function validSquare(xAxis: number, yAxis: number) {
     return (xAxis >= 3 && xAxis <= 10) || (yAxis >= 3 && yAxis <= 10);
 }
 

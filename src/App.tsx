@@ -3,9 +3,12 @@ import Chessboard from './Components/Chessboard/Chessboard'
 
 function App() {
   return (
-    <div id="app">
-      <Chessboard />
-    </div>
+      <>
+          <div id="logo"><h1>Chess Attack <span id="piece">♔</span></h1></div>
+          <div id="app">
+              <Chessboard />
+          </div>
+      </>
   );
 }
 
