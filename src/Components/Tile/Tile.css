@@ -1,0 +1,36 @@
+.tile {
+    display: grid;
+    place-content: center;
+    width: calc(90vh / 14);
+    height: calc(90vh / 14);
+}
+
+.tile .chess-piece {
+    background-repeat: no-repeat;
+    background-size: auto calc(80vh / 14);
+    height: calc(100vh / 14);
+    width: calc(100vh / 14);
+    background-position: center;
+}
+
+.tile .chess-piece:hover {
+    cursor: grab;
+}
+
+.tile .chess-piece:active {
+    cursor: grabbing;
+}
+
+.out-of-bounds {
+    color: #383533FF;
+    background-color: #383533;
+}
+
+.black-tile {
+    background-color: #8D81B5FF;
+}
+
+.white-tile {
+    background-color: #F1F1F1;
+}
+
