@@ -45,14 +45,19 @@ const initialBoardState: Piece[] = initialisePieces.map(p => {
 });
 
 export default function Chessboard() {
+    const [activePiece, setActivePiece] = useState<HTMLElement | null>(null);
+    const [gridX, setGridX] = useState(0);
+    const [gridY, setGridY] = useState(0);
     const [pieces, setPieces] = useState<Piece[]>(initialBoardState);
     const chessboardRef = useRef<HTMLDivElement>(null);
-
-    let activePiece: HTMLDivElement | null = null;
     function grabPiece(e: React.MouseEvent) {
         const element = e.target as HTMLDivElement;
+        const chessboard = chessboardRef.current;
 
-        if (element.classList.contains("chess-piece")) {
+        if (element.classList.contains("chess-piece") && chessboard) {
+            const tileWidth = chessboard.offsetWidth / 14;
+            setGridX(Math.floor((e.clientX - chessboard.offsetLeft) / tileWidth));
+            setGridY(Math.abs(Math.floor((e.clientY - chessboard.offsetTop) / tileWidth) - 13));
             const x = e.clientX - element.clientHeight / 2;
             const y = e.clientY - element.clientHeight / 2;
             element.style.position = "absolute";
@@ -60,7 +65,7 @@ export default function Chessboard() {
             element.style.top = `${y}px`;
             element.style.backgroundSize = "auto calc(100vh / 14)"
 
-            activePiece = element;
+            setActivePiece(element);
         }
     }
 
@@ -81,19 +86,23 @@ export default function Chessboard() {
     }
 
     function dropPiece(e: React.MouseEvent) {
-        if (activePiece) {
+        const chessboard = chessboardRef.current;
+        if (activePiece && chessboard) {
+            const tileWidth = chessboard.offsetWidth / 14;
+            const x = Math.floor((e.clientX - chessboard.offsetLeft) / tileWidth);
+            const y = Math.abs(Math.floor((e.clientY - chessboard.offsetTop) / tileWidth) - 13);
             setPieces(value => {
                 const pieces = value.map(p => {
-                    if (p.x === 3 && p.y === 0) {
-                        p.x = 5;
-                        p.y = 5;
+                    if (p.x === gridX && p.y === gridY) {
+                        p.x = x;
+                        p.y = y;
                     }
                     return p;
                 });
                 return pieces;
             });
             activePiece.style.backgroundSize = "auto calc(80vh / 14)";
-            activePiece = null;
+            setActivePiece(null);
         }
     }
 
