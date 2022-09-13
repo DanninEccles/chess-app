@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+### Project summary
 
-In the project directory, you can run:
+For my project I attempted to create a 4-player chess application, with
+the goal of teaching myself React and TypeScript. By the time of my submission,
+I was able to make the pieces able to be dragged and dropped between valid 
+squares and also managed to implement most of the basic logic, such as capturing
+and rules governing pieces. However, I still need to finish implementing
+the remaining rules. I also wanted to create a server so that the game
+could be played with friends, but didn't get around to it.
 
-### `npm start`
+[Devpost Link to Submission](https://devpost.com/software/chess-attack)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Author
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* **Dannin Eccles** - @dannin – dannin@seas.upenn.edu – [GitHub](https://github.com/DanninEccles)
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+A modern web browser such as Chrome or Firefox.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Simply visit [CHESS ATTACK](https://chess-app-dannineccles.vercel.app/) and
+start playing around with the web application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployment
 
-### `npm run eject`
+1. Grab three friends and open [CHESS ATTACK](https://chess-app-dannineccles.vercel.app/).
+2. Assign each friend a color and then take turns moving the chess pieces
+until only one king remains.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Note that since the application is incomplete, only basic moves and captures
+are currently possible.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Additional information
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Tools used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [React](https://reactjs.org/) - A JavaScript library 
+for building user interfaces
+* [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for
+    types
+* [WebStorm](https://www.jetbrains.com/webstorm/) - The smartest JavaScript IDE
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Much of my project was built off of modifications from the youtube video series
+[Create a Chess Game with ReactJS](https://www.youtube.com/playlist?list=PLBmRxydnERkysOgOS917Ojc_-uisgb8Aj).
+Although I frequently looked through his videos when I got stuck to get an idea
+for how to solve a problem, all coding was my own work and my project was
+sufficiently different, being a 4-player game, that I ended up having to solve
+problems he doesn't tackle.
